@@ -6,3 +6,4 @@ public class CharacterPanel extends JPanel {
     }
 }
 
+

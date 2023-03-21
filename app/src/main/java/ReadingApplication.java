@@ -1,19 +1,21 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
-
-public class Reading {
-
+public class ReadingApplication {
     private JFrame frame;
     private JPanel contentPanel;
 
+    private List<Book> books = new ArrayList<>();
+
     public static void main(String[] args) {
-        Reading application = new Reading();
+        ReadingApplication application = new ReadingApplication();
         application.run();
     }
 
     private void run() {
-        frame = new JFrame("Reading");
+        frame = new JFrame("ReadingApplication");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 600);
 
@@ -38,7 +40,7 @@ public class Reading {
     public JButton createHomeButton() {
         JButton button = new JButton("홈");
         button.addActionListener(event -> {
-            JPanel homePanel = new HomePanel();
+            JPanel homePanel = new HomePanel(books);
             showContentPanel(homePanel);
         });
         return button;
@@ -47,7 +49,7 @@ public class Reading {
     public JButton createLibraryButton() {
         JButton button = new JButton("서재");
         button.addActionListener(event -> {
-            JPanel libraryPanel = new LibraryPanel();
+            JPanel libraryPanel = new LibraryPanel(books);
             showContentPanel(libraryPanel);
         });
         return button;
@@ -56,7 +58,7 @@ public class Reading {
     public JButton createCharacterButton() {
         JButton button = new JButton("캐릭터");
         button.addActionListener(event -> {
-            JPanel characterPanel = new CharacterPanel();
+            JPanel characterPanel = new CharacterPanel(books);
             showContentPanel(characterPanel);
         });
         return button;
@@ -65,7 +67,7 @@ public class Reading {
     public JButton createBookReportButton() {
         JButton button = new JButton("기록");
         button.addActionListener(event -> {
-            JPanel bookReportPanel = new BookReportPanel();
+            JPanel bookReportPanel = new BookReportPanel(books);
             showContentPanel(bookReportPanel);
         });
         return button;
@@ -74,7 +76,7 @@ public class Reading {
     public JButton createFavoritesButton() {
         JButton button = new JButton("즐겨찾기");
         button.addActionListener(event -> {
-            JPanel favoritesPanel = new FavoritesPanel();
+            JPanel favoritesPanel = new FavoritesPanel(books);
             showContentPanel(favoritesPanel);
         });
         return button;

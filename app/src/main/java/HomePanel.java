@@ -1,13 +1,14 @@
 import javax.swing.*;
-import java.util.ArrayList;
 import java.util.List;
 
 public class HomePanel extends JPanel {
-    private List<String> titles = new ArrayList<>();
 
-    HomePanel() {
+    HomePanel(List<Book> books) {
 
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+
+        JLabel howManyBooksLabel = new JLabel("총 " + books.size() + "권의 책을 읽으셨습니다.");
+        this.add(howManyBooksLabel);
 
         JButton recordButton = new JButton("읽은 책 기록하기");
         this.add(recordButton);
@@ -30,16 +31,10 @@ public class HomePanel extends JPanel {
             JTextField memoTextField = new JTextField(30);
             JButton saveButton = new JButton("저장");
             saveButton.addActionListener((saveEvent) -> {
-                titleTextField.getText();
-                titles.add(titleTextField.getText());
-                for (int i = 0; i < titles.size(); i += 1) {
-                    JLabel saveLabel = new JLabel(titles.get(i));
-                    recordPanel.add(saveLabel);
-                    System.out.println(titles.get(i));
-                }
+                Book book = new Book(titleTextField.getText(), authorTextField.getText(), publisherTextField.getText(), Integer.parseInt(pageTextField.getText()),
+                        aboutTheBookTextField.getText(), favoritesCheckBox.isSelected(), memoTextField.getText());
+                books.add(book);
             });
-
-
             recordPanel.add(titleLabel);
             recordPanel.add(titleTextField);
             recordPanel.add(authorLabel);
@@ -76,7 +71,7 @@ public class HomePanel extends JPanel {
         });
     }
 
-    private void showContentPanel(JPanel panel) {
+    public void showContentPanel(JPanel panel) {
         this.removeAll();
         this.add(panel);
 

@@ -7,60 +7,41 @@ public class Book {
     private boolean favorites;
     private String memo;
 
-    public String title() {
-        return title;
-    }
-
-    public String author() {
-        return author;
-    }
-
-    public String publisher() {
-        return publisher;
-    }
-
-    public int page() {
-        return page;
-    }
-
-    public String aboutTheBook() {
-        return aboutTheBook;
-    }
-
-    public boolean favorites() {
-        return favorites;
-    }
-
-    public String memo() {
-        return memo;
-    }
-
-    public void editTitle(String title) {
+    public Book(String title, String author, String publisher, int page, String aboutTheBook, boolean favorites, String memo) {
         this.title = title;
-    }
-
-    public void editAuthor(String author) {
         this.author = author;
-    }
-
-    public void editPublisher(String publisher) {
         this.publisher = publisher;
-    }
-
-    public void editPage(int page) {
         this.page = page;
-    }
-
-    public void editAboutTheBook(String aboutTheBook) {
         this.aboutTheBook = aboutTheBook;
-    }
-
-    public void editFavorites(boolean favorites) {
         this.favorites = favorites;
-    }
-
-    public void editMemo(String memo) {
         this.memo = memo;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public int getPage() {
+        return page;
+    }
+
+    public String getAboutTheBook() {
+        return aboutTheBook;
+    }
+
+    public boolean getFavorites() {
+        return favorites;
+    }
+
+    public String getMemo() {
+        return memo;
+    }
 }

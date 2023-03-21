@@ -6,7 +6,7 @@ public class FavoritesPanel extends JPanel {
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         for (Book book : books) {
-            if(book.getFavorites()){
+            if (book.getFavorites()) {
                 JButton titleButton = new JButton(book.getTitle());
                 this.add(titleButton);
                 titleButton.addActionListener((event) -> {
@@ -33,6 +33,7 @@ public class FavoritesPanel extends JPanel {
             }
         }
     }
+
     public void showContentPanel(JPanel panel) {
         this.removeAll();
         this.add(panel);

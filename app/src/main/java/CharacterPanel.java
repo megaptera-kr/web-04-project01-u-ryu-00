@@ -8,7 +8,6 @@ public class CharacterPanel extends JPanel {
         JLabel howManyBooksLabel = new JLabel("총 " + books.size() + "권의 책을 읽으셨습니다.");
         this.add(howManyBooksLabel);
 
-
         if (books.size() < 3) {
             JLabel characterLabel = new JLabel("현재 나의 캐릭터는 도톨이");
             this.add(characterLabel);
@@ -55,9 +54,12 @@ public class CharacterPanel extends JPanel {
             JPanel acornPanel = new JPanel();
             acornPanel.setLayout(new BoxLayout(acornPanel, BoxLayout.Y_AXIS));
             JLabel acornLabel = new JLabel("도톨이입니다.");
-            JLabel acornLabel2 = new JLabel("안녕하세요.");
             acornPanel.add(acornLabel);
-            acornPanel.add(acornLabel2);
+
+            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/java/IMG_0147.jpg");
+            JLabel label = new JLabel();
+            label.setIcon(icon);
+            acornPanel.add(label);
 
             showContentPanel(acornPanel);
         });
@@ -66,8 +68,14 @@ public class CharacterPanel extends JPanel {
         this.add(bottleCapButton);
         bottleCapButton.addActionListener((acornEvent) -> {
             JPanel bottleCapPanel = new JPanel();
+            bottleCapPanel.setLayout(new BoxLayout(bottleCapPanel, BoxLayout.Y_AXIS));
             JLabel bottleCapLabel = new JLabel("병뚜껑입니다.");
             bottleCapPanel.add(bottleCapLabel);
+
+            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/java/IMG_0148.jpg");
+            JLabel label = new JLabel();
+            label.setIcon(icon);
+            bottleCapPanel.add(label);
 
             showContentPanel(bottleCapPanel);
         });
@@ -77,8 +85,14 @@ public class CharacterPanel extends JPanel {
         this.add(tangerineButton);
         tangerineButton.addActionListener((tangerineEvent) -> {
             JPanel tangerinePanel = new JPanel();
+            tangerinePanel.setLayout(new BoxLayout(tangerinePanel, BoxLayout.Y_AXIS));
             JLabel tangerineLabel = new JLabel("왕귤입니다.");
             tangerinePanel.add(tangerineLabel);
+
+            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/java/IMG_0149.jpg");
+            JLabel label = new JLabel();
+            label.setIcon(icon);
+            tangerinePanel.add(label);
 
             showContentPanel(tangerinePanel);
         });
@@ -88,8 +102,14 @@ public class CharacterPanel extends JPanel {
         this.add(mugButton);
         mugButton.addActionListener((mugEvent) -> {
             JPanel mugPanel = new JPanel();
+            mugPanel.setLayout(new BoxLayout(mugPanel, BoxLayout.Y_AXIS));
             JLabel mugLabel = new JLabel("머그컵입니다.");
             mugPanel.add(mugLabel);
+
+            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/java/IMG_0150.jpg");
+            JLabel label = new JLabel();
+            label.setIcon(icon);
+            mugPanel.add(label);
 
             showContentPanel(mugPanel);
         });
@@ -98,8 +118,14 @@ public class CharacterPanel extends JPanel {
         this.add(peachButton);
         peachButton.addActionListener((peachEvent) -> {
             JPanel peachPanel = new JPanel();
+            peachPanel.setLayout(new BoxLayout(peachPanel, BoxLayout.Y_AXIS));
             JLabel peachLabel = new JLabel("복숭아입니다.");
             peachPanel.add(peachLabel);
+
+            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/java/IMG_0151.jpg");
+            JLabel label = new JLabel();
+            label.setIcon(icon);
+            peachPanel.add(label);
 
             showContentPanel(peachPanel);
         });
@@ -108,8 +134,14 @@ public class CharacterPanel extends JPanel {
         this.add(sweetPotatoButton);
         sweetPotatoButton.addActionListener((sweetPotatoEvent) -> {
             JPanel sweetPotatoPanel = new JPanel();
+            sweetPotatoPanel.setLayout(new BoxLayout(sweetPotatoPanel, BoxLayout.Y_AXIS));
             JLabel sweetPotatoLabel = new JLabel("찐고구마입니다.");
             sweetPotatoPanel.add(sweetPotatoLabel);
+
+            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/java/IMG_0152.jpg");
+            JLabel label = new JLabel();
+            label.setIcon(icon);
+            sweetPotatoPanel.add(label);
 
             showContentPanel(sweetPotatoPanel);
         });
@@ -118,8 +150,14 @@ public class CharacterPanel extends JPanel {
         this.add(breadButton);
         breadButton.addActionListener((breadEvent) -> {
             JPanel breadPanel = new JPanel();
+            breadPanel.setLayout(new BoxLayout(breadPanel, BoxLayout.Y_AXIS));
             JLabel breadLabel = new JLabel("식빵이입니다.");
             breadPanel.add(breadLabel);
+
+            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/java/IMG_0153.jpg");
+            JLabel label = new JLabel();
+            label.setIcon(icon);
+            breadPanel.add(label);
 
             showContentPanel(breadPanel);
         });
@@ -127,13 +165,17 @@ public class CharacterPanel extends JPanel {
         this.add(iPadButton);
         iPadButton.addActionListener((iPadEvent) -> {
             JPanel iPadPanel = new JPanel();
+            iPadPanel.setLayout(new BoxLayout(iPadPanel, BoxLayout.Y_AXIS));
             JLabel iPadLabel = new JLabel("아이패드입니다.");
             iPadPanel.add(iPadLabel);
 
+            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/java/IMG_0154.jpg");
+            JLabel label = new JLabel();
+            label.setIcon(icon);
+            iPadPanel.add(label);
+
             showContentPanel(iPadPanel);
         });
-
-
     }
 
     public void showContentPanel(JPanel panel) {
@@ -144,5 +186,3 @@ public class CharacterPanel extends JPanel {
         this.setVisible(true);
     }
 }
-
-

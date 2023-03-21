@@ -32,6 +32,13 @@ public class LibraryPanel extends JPanel {
                 bookInformationPanel.add(deleteButton);
                 deleteButton.addActionListener((deleteEvent) -> {
                     books.remove(book);
+
+                    this.removeAll();
+                    LibraryPanel libraryPanel = new LibraryPanel(books);
+                    this.add(libraryPanel);
+
+                    this.setVisible(false);
+                    this.setVisible(true);
                 });
                 showContentPanel(bookInformationPanel);
             });

@@ -1,5 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +28,11 @@ public class ReadingApplication {
         initMenu();
         initContentPanel();
 
+        loadData();
+
         frame.setVisible(true);
+
+        Runtime.getRuntime().addShutdownHook(new Thread(this::saveData));
     }
 
     public void initMenu() {
@@ -97,6 +107,32 @@ public class ReadingApplication {
 
         frame.setVisible(true);
     }
+
+    public void saveData() {
+        try {
+            FileOutputStream fileOutputStream = new FileOutputStream("books.dat");
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+            objectOutputStream.writeObject(books);
+            objectOutputStream.close();
+            fileOutputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void loadData() {
+        try {
+            File file = new File("books.dat");
+            if (file.exists()) {
+                FileInputStream fileInputStream = new FileInputStream(file);
+                ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+                books = (List<Book>) objectInputStream.readObject();
+                objectInputStream.close();
+                fileInputStream.close();
+            }
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
-
-

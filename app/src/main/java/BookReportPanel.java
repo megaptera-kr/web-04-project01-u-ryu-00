@@ -18,6 +18,7 @@ public class BookReportPanel extends JPanel {
             });
         }
     }
+
     public void showContentPanel(JPanel panel) {
         this.removeAll();
         this.add(panel);

@@ -1,45 +1,49 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 public class RegisterLoginPanel extends JPanel {
-    public RegisterLoginPanel() {
+    public RegisterLoginPanel(List<User> users) {
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
-        JLabel loginLabel = new JLabel("아이디: ");
-        this.add(loginLabel);
+        JLabel idLabel = new JLabel("아이디: ");
+        this.add(idLabel);
 
-        JTextField loginTextField = new JTextField(30);
-        this.add(loginTextField);
+        JTextField idTextField = new JTextField(30);
+        this.add(idTextField);
 
-        JLabel registerLabel = new JLabel("비밀번호: ");
-        this.add(registerLabel);
+        JLabel passwordLabel = new JLabel("비밀번호: ");
+        this.add(passwordLabel);
 
-        JTextField registerTextField = new JTextField(30);
-        this.add(registerTextField);
+        JTextField passwordTextField = new JTextField(30);
+        this.add(passwordTextField);
 
         JButton loginButton = new JButton("로그인");
         this.add(loginButton);
-        loginButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String id = loginTextField.getText();
-                String password = new String(registerTextField.getText());
-
-                JOptionPane.showMessageDialog(null, "아이디: " + id + ", 비밀번호: " + password);
+        loginButton.addActionListener((event) -> {
+            if (users.size() == 0) {
+                JOptionPane.showMessageDialog(null, "회원가입을 먼저 해주세요!");
             }
+//            if (idTextField.getText().equals(user.getId()) && passwordTextField.getText().equals(user.getPassword())) {
+//                JOptionPane.showMessageDialog(null, "로그인 성공!");
+//            }
+//            if (!idTextField.getText().equals(user.getId()) || !passwordTextField.getText().equals(user.getPassword())) {
+//                JOptionPane.showMessageDialog(null, "로그인 실패!");
+//            }
+            idTextField.setText("");
+            passwordTextField.setText("");
         });
 
         JButton registerButton = new JButton("회원가입");
         this.add(registerButton);
-        registerButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                RegisterPanel registerPanel = new RegisterPanel();
-                showContentPanel(registerPanel);
 
-                new RegisterPanel();
-            }
+        registerButton.addActionListener((event) -> {
+            User user = new User(idTextField.getText(), passwordTextField.getText());
+            users.add(user);
+
+            idTextField.setText("");
+            passwordTextField.setText("");
         });
     }
 

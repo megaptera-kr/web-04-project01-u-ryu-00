@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.util.List;
 import java.awt.Image;
 
-
 public class HomePanel extends JPanel {
     HomePanel(List<Book> books) {
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));

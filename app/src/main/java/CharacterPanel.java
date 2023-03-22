@@ -53,10 +53,10 @@ public class CharacterPanel extends JPanel {
         acornButton.addActionListener((acornEvent) -> {
             JPanel acornPanel = new JPanel();
             acornPanel.setLayout(new BoxLayout(acornPanel, BoxLayout.Y_AXIS));
-            JLabel acornLabel = new JLabel("도톨이입니다.");
+            JLabel acornLabel = new JLabel("나는 도톨이");
             acornPanel.add(acornLabel);
 
-            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/java/IMG_0147.jpg");
+            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/Image/도톨이.jpg");
             JLabel label = new JLabel();
             label.setIcon(icon);
             acornPanel.add(label);
@@ -69,10 +69,10 @@ public class CharacterPanel extends JPanel {
         bottleCapButton.addActionListener((acornEvent) -> {
             JPanel bottleCapPanel = new JPanel();
             bottleCapPanel.setLayout(new BoxLayout(bottleCapPanel, BoxLayout.Y_AXIS));
-            JLabel bottleCapLabel = new JLabel("병뚜껑입니다.");
+            JLabel bottleCapLabel = new JLabel("나는 병뚜껑");
             bottleCapPanel.add(bottleCapLabel);
 
-            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/java/IMG_0148.jpg");
+            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/Image/병뚜껑.jpg");
             JLabel label = new JLabel();
             label.setIcon(icon);
             bottleCapPanel.add(label);
@@ -86,10 +86,10 @@ public class CharacterPanel extends JPanel {
         tangerineButton.addActionListener((tangerineEvent) -> {
             JPanel tangerinePanel = new JPanel();
             tangerinePanel.setLayout(new BoxLayout(tangerinePanel, BoxLayout.Y_AXIS));
-            JLabel tangerineLabel = new JLabel("왕귤입니다.");
+            JLabel tangerineLabel = new JLabel("나는 왕귤");
             tangerinePanel.add(tangerineLabel);
 
-            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/java/IMG_0149.jpg");
+            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/Image/왕귤.jpg");
             JLabel label = new JLabel();
             label.setIcon(icon);
             tangerinePanel.add(label);
@@ -103,10 +103,10 @@ public class CharacterPanel extends JPanel {
         mugButton.addActionListener((mugEvent) -> {
             JPanel mugPanel = new JPanel();
             mugPanel.setLayout(new BoxLayout(mugPanel, BoxLayout.Y_AXIS));
-            JLabel mugLabel = new JLabel("머그컵입니다.");
+            JLabel mugLabel = new JLabel("나는 머그컵");
             mugPanel.add(mugLabel);
 
-            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/java/IMG_0150.jpg");
+            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/Image/머그컵.jpg");
             JLabel label = new JLabel();
             label.setIcon(icon);
             mugPanel.add(label);
@@ -119,10 +119,10 @@ public class CharacterPanel extends JPanel {
         peachButton.addActionListener((peachEvent) -> {
             JPanel peachPanel = new JPanel();
             peachPanel.setLayout(new BoxLayout(peachPanel, BoxLayout.Y_AXIS));
-            JLabel peachLabel = new JLabel("복숭아입니다.");
+            JLabel peachLabel = new JLabel("나는 복숭아");
             peachPanel.add(peachLabel);
 
-            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/java/IMG_0151.jpg");
+            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/Image/복숭아.jpg");
             JLabel label = new JLabel();
             label.setIcon(icon);
             peachPanel.add(label);
@@ -135,10 +135,10 @@ public class CharacterPanel extends JPanel {
         sweetPotatoButton.addActionListener((sweetPotatoEvent) -> {
             JPanel sweetPotatoPanel = new JPanel();
             sweetPotatoPanel.setLayout(new BoxLayout(sweetPotatoPanel, BoxLayout.Y_AXIS));
-            JLabel sweetPotatoLabel = new JLabel("찐고구마입니다.");
+            JLabel sweetPotatoLabel = new JLabel("나는 찐고구마");
             sweetPotatoPanel.add(sweetPotatoLabel);
 
-            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/java/IMG_0152.jpg");
+            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/Image/찐고구마.jpg");
             JLabel label = new JLabel();
             label.setIcon(icon);
             sweetPotatoPanel.add(label);
@@ -151,10 +151,10 @@ public class CharacterPanel extends JPanel {
         breadButton.addActionListener((breadEvent) -> {
             JPanel breadPanel = new JPanel();
             breadPanel.setLayout(new BoxLayout(breadPanel, BoxLayout.Y_AXIS));
-            JLabel breadLabel = new JLabel("식빵이입니다.");
+            JLabel breadLabel = new JLabel("나는 식빵이");
             breadPanel.add(breadLabel);
 
-            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/java/IMG_0153.jpg");
+            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/Image/식빵이.jpg");
             JLabel label = new JLabel();
             label.setIcon(icon);
             breadPanel.add(label);
@@ -166,10 +166,10 @@ public class CharacterPanel extends JPanel {
         iPadButton.addActionListener((iPadEvent) -> {
             JPanel iPadPanel = new JPanel();
             iPadPanel.setLayout(new BoxLayout(iPadPanel, BoxLayout.Y_AXIS));
-            JLabel iPadLabel = new JLabel("아이패드입니다.");
+            JLabel iPadLabel = new JLabel("나는 아이패드");
             iPadPanel.add(iPadLabel);
 
-            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/java/IMG_0154.jpg");
+            ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/Image/아이패드.jpg");
             JLabel label = new JLabel();
             label.setIcon(icon);
             iPadPanel.add(label);

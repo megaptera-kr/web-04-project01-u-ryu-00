@@ -14,25 +14,32 @@ public class ReadingApplication {
     private JPanel contentPanel;
 
     private List<Book> books = new ArrayList<>();
+    private List<Review> firstStoreReviews = new ArrayList<>();
+    private List<Review> secondStoreReviews = new ArrayList<>();
 
     public static void main(String[] args) {
         ReadingApplication application = new ReadingApplication();
         application.run();
     }
 
-    private void run() {
+    public void run() {
         frame = new JFrame("ReadingApplication");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500, 600);
+        frame.setSize(900, 800);
+        frame.setLocationRelativeTo(null);
 
         initMenu();
         initContentPanel();
 
-        loadData();
+        loadBooksData();
+        loadFirstStoreReviewsData();
+        loadSecondStoreReviewsData();
 
         frame.setVisible(true);
 
-        Runtime.getRuntime().addShutdownHook(new Thread(this::saveData));
+        Runtime.getRuntime().addShutdownHook(new Thread(this::saveBooksData));
+        Runtime.getRuntime().addShutdownHook(new Thread(this::saveFirstStoreReviewData));
+        Runtime.getRuntime().addShutdownHook(new Thread(this::saveSecondStoreReviewData));
     }
 
     public void initMenu() {
@@ -40,11 +47,31 @@ public class ReadingApplication {
         panel.setLayout(new FlowLayout());
         frame.add(panel, BorderLayout.PAGE_START);
 
+        panel.add(createCrowdedButton());
+        panel.add(createRegisterLoginButton());
         panel.add(createHomeButton());
         panel.add(createLibraryButton());
         panel.add(createCharacterButton());
         panel.add(createBookReportButton());
         panel.add(createFavoritesButton());
+    }
+
+    public JButton createCrowdedButton() {
+        JButton button = new JButton("북적북적");
+        button.addActionListener(event -> {
+            JPanel crowdedPanel = new CrowdedPanel(firstStoreReviews, secondStoreReviews);
+            showContentPanel(crowdedPanel);
+        });
+        return button;
+    }
+
+    public JButton createRegisterLoginButton() {
+        JButton button = new JButton("로그인 / 회원가입");
+        button.addActionListener(event -> {
+            JPanel registerLoginPanel = new RegisterLoginPanel();
+            showContentPanel(registerLoginPanel);
+        });
+        return button;
     }
 
     public JButton createHomeButton() {
@@ -108,9 +135,9 @@ public class ReadingApplication {
         frame.setVisible(true);
     }
 
-    public void saveData() {
+    public void saveBooksData() {
         try {
-            FileOutputStream fileOutputStream = new FileOutputStream("books.dat");
+            FileOutputStream fileOutputStream = new FileOutputStream("books.csv");
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
             objectOutputStream.writeObject(books);
             objectOutputStream.close();
@@ -120,13 +147,68 @@ public class ReadingApplication {
         }
     }
 
-    public void loadData() {
+    public void saveFirstStoreReviewData() {
         try {
-            File file = new File("books.dat");
+            FileOutputStream fileOutputStream = new FileOutputStream("firstStoreReview.csv");
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+            objectOutputStream.writeObject(firstStoreReviews);
+            objectOutputStream.close();
+            fileOutputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void saveSecondStoreReviewData() {
+        try {
+            FileOutputStream fileOutputStream = new FileOutputStream("secondStoreReview.csv");
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+            objectOutputStream.writeObject(secondStoreReviews);
+            objectOutputStream.close();
+            fileOutputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+    public void loadBooksData() {
+        try {
+            File file = new File("books.csv");
             if (file.exists()) {
                 FileInputStream fileInputStream = new FileInputStream(file);
                 ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
                 books = (List<Book>) objectInputStream.readObject();
+                objectInputStream.close();
+                fileInputStream.close();
+            }
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void loadFirstStoreReviewsData() {
+        try {
+            File file = new File("firstStoreReview.csv");
+            if (file.exists()) {
+                FileInputStream fileInputStream = new FileInputStream(file);
+                ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+                firstStoreReviews = (List<Review>) objectInputStream.readObject();
+                objectInputStream.close();
+                fileInputStream.close();
+            }
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+    public void loadSecondStoreReviewsData() {
+        try {
+            File file = new File("secondStoreReview.csv");
+            if (file.exists()) {
+                FileInputStream fileInputStream = new FileInputStream(file);
+                ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+                secondStoreReviews = (List<Review>) objectInputStream.readObject();
                 objectInputStream.close();
                 fileInputStream.close();
             }

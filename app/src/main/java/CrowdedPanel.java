@@ -1,3 +1,5 @@
+import org.checkerframework.checker.units.qual.C;
+
 import javax.swing.JPanel;
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
@@ -17,6 +19,7 @@ public class CrowdedPanel extends JPanel {
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         JPanel topPanel = new JPanel();
         topPanel.setLayout(new BoxLayout(topPanel, BoxLayout.Y_AXIS));
+        topPanel.setBackground(Color.white);
         this.add(topPanel);
         JLabel searchLabel = new JLabel("검색 : ");
         topPanel.add(searchLabel);

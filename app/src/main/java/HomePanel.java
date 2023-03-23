@@ -11,9 +11,11 @@ import java.awt.Image;
 public class HomePanel extends JPanel {
     HomePanel(List<Book> books) {
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+//        this.setLayout(null);
 
         JLabel howManyBooksLabel = new JLabel("총 " + books.size() + "권의 책을 읽으셨습니다.");
         this.add(howManyBooksLabel);
+//        howManyBooksLabel.setBounds(10,100,50,50);
 
         JButton recordButton = new JButton("읽은 책 기록하기");
         this.add(recordButton);

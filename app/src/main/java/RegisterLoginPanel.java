@@ -4,8 +4,6 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.BoxLayout;
 import javax.swing.JOptionPane;
-
-
 import java.util.List;
 
 public class RegisterLoginPanel extends JPanel {
@@ -49,7 +47,4 @@ public class RegisterLoginPanel extends JPanel {
             passwordTextField.setText("");
         });
     }
-
-
-
 }

@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 import java.util.List;
 
 public class RegisterLoginPanel extends JPanel {
-    public RegisterLoginPanel(List<User> users) {
+    public RegisterLoginPanel(List<User> users, List<Token> tokens) {
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         JLabel idLabel = new JLabel("아이디: ");
@@ -29,7 +29,8 @@ public class RegisterLoginPanel extends JPanel {
             for (User user : users) {
                 if (idTextField.getText().equals(user.getId()) && passwordTextField.getText().equals(user.getPassword())) {
                     JOptionPane.showMessageDialog(null, "로그인 성공!");
-                    break;
+                    Token token = new Token(idTextField.getText());
+                    tokens.add(token);
                 }
             }
             idTextField.setText("");

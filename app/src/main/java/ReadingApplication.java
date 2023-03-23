@@ -1,6 +1,4 @@
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JButton;
+import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 import java.io.FileInputStream;
@@ -16,6 +14,8 @@ public class ReadingApplication {
     private JPanel contentPanel;
 
     private List<Book> books = new ArrayList<>();
+    private List<User> users = new ArrayList<>();
+    private List<Token> tokens = new ArrayList<>();
 
     private List<Review> firstStoreReviews = new ArrayList<>();
     private List<Review> secondStoreReviews = new ArrayList<>();
@@ -28,7 +28,6 @@ public class ReadingApplication {
     private List<Review> backingReviews = new ArrayList<>();
     private List<Review> workReviews = new ArrayList<>();
 
-    private List<User> users = new ArrayList<>();
 
     public static void main(String[] args) {
         ReadingApplication application = new ReadingApplication();
@@ -75,6 +74,7 @@ public class ReadingApplication {
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
         frame.add(panel, BorderLayout.PAGE_START);
+        panel.setBackground(Color.pink);
 
         panel.add(createCrowdedButton());
         panel.add(createRegisterLoginButton());
@@ -97,7 +97,7 @@ public class ReadingApplication {
     public JButton createRegisterLoginButton() {
         JButton button = new JButton("로그인 / 회원가입");
         button.addActionListener(event -> {
-            JPanel registerLoginPanel = new RegisterLoginPanel(users);
+            JPanel registerLoginPanel = new RegisterLoginPanel(users, tokens);
             showContentPanel(registerLoginPanel);
         });
         return button;
@@ -106,8 +106,14 @@ public class ReadingApplication {
     public JButton createHomeButton() {
         JButton button = new JButton("홈");
         button.addActionListener(event -> {
-            JPanel homePanel = new HomePanel(books);
-            showContentPanel(homePanel);
+            if (tokens.size() == 0) {
+                JOptionPane.showMessageDialog(null, "접근 권한이 없습니다.");
+            }
+            if (tokens.size() != 0) {
+                JOptionPane.showMessageDialog(null, "저희 서비스를 이용해주셔서 감사합니다.");
+                JPanel homePanel = new HomePanel(books);
+                showContentPanel(homePanel);
+            }
         });
         return button;
     }
@@ -115,8 +121,13 @@ public class ReadingApplication {
     public JButton createLibraryButton() {
         JButton button = new JButton("서재");
         button.addActionListener(event -> {
-            JPanel libraryPanel = new LibraryPanel(books);
-            showContentPanel(libraryPanel);
+            if (tokens.size() == 0) {
+                JOptionPane.showMessageDialog(null, "접근 권한이 없습니다.");
+            }
+            if (tokens.size() != 0) {
+                JPanel libraryPanel = new LibraryPanel(books);
+                showContentPanel(libraryPanel);
+            }
         });
         return button;
     }
@@ -124,8 +135,13 @@ public class ReadingApplication {
     public JButton createCharacterButton() {
         JButton button = new JButton("캐릭터");
         button.addActionListener(event -> {
-            JPanel characterPanel = new CharacterPanel(books);
-            showContentPanel(characterPanel);
+            if (tokens.size() == 0) {
+                JOptionPane.showMessageDialog(null, "접근 권한이 없습니다.");
+            }
+            if (tokens.size() != 0) {
+                JPanel characterPanel = new CharacterPanel(books);
+                showContentPanel(characterPanel);
+            }
         });
         return button;
     }
@@ -133,8 +149,13 @@ public class ReadingApplication {
     public JButton createBookReportButton() {
         JButton button = new JButton("기록");
         button.addActionListener(event -> {
-            JPanel bookReportPanel = new BookReportPanel(books);
-            showContentPanel(bookReportPanel);
+            if (tokens.size() == 0) {
+                JOptionPane.showMessageDialog(null, "접근 권한이 없습니다.");
+            }
+            if (tokens.size() != 0) {
+                JPanel bookReportPanel = new BookReportPanel(books);
+                showContentPanel(bookReportPanel);
+            }
         });
         return button;
     }
@@ -142,8 +163,13 @@ public class ReadingApplication {
     public JButton createFavoritesButton() {
         JButton button = new JButton("즐겨찾기");
         button.addActionListener(event -> {
-            JPanel favoritesPanel = new FavoritesPanel(books);
-            showContentPanel(favoritesPanel);
+            if (tokens.size() == 0) {
+                JOptionPane.showMessageDialog(null, "접근 권한이 없습니다.");
+            }
+            if (tokens.size() != 0) {
+                JPanel favoritesPanel = new FavoritesPanel(books);
+                showContentPanel(favoritesPanel);
+            }
         });
         return button;
     }

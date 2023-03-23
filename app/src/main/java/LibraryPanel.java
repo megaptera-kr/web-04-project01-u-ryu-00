@@ -40,6 +40,13 @@ public class LibraryPanel extends JPanel {
                     this.setVisible(false);
                     this.setVisible(true);
                 });
+
+                JButton editButton = new JButton("수정");
+                bookInformationPanel.add(editButton);
+                editButton.addActionListener((deleteEvent) -> {
+                    JOptionPane.showMessageDialog(null, "삭제 버튼을 눌러 기록을 삭제한 후 홈 화면으로 이동해서 수정한 책 정보를 다시 등록해주세요.");
+                });
+
                 showContentPanel(bookInformationPanel);
             });
         }

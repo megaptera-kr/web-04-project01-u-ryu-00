@@ -1,13 +1,13 @@
 import java.io.Serializable;
 
 public class Book implements Serializable {
-    private String title = "";
-    private String author = "";
-    private String publisher = "";
-    private int page = 0;
-    private String aboutTheBook = "";
-    private boolean favorites = true;
-    private String memo = "";
+    private String title;
+    private String author;
+    private String publisher;
+    private int page;
+    private String aboutTheBook;
+    private boolean favorites;
+    private String memo;
 
     public Book(String title, String author, String publisher, int page, String aboutTheBook, boolean favorites, String memo) {
         this.title = title;

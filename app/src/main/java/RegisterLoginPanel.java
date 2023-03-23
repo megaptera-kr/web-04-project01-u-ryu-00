@@ -1,6 +1,11 @@
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.BoxLayout;
+import javax.swing.JOptionPane;
+
+
 import java.util.List;
 
 public class RegisterLoginPanel extends JPanel {
@@ -21,16 +26,14 @@ public class RegisterLoginPanel extends JPanel {
 
         JButton loginButton = new JButton("로그인");
         this.add(loginButton);
+
         loginButton.addActionListener((event) -> {
-            if (users.size() == 0) {
-                JOptionPane.showMessageDialog(null, "회원가입을 먼저 해주세요!");
+            for (User user : users) {
+                if (idTextField.getText().equals(user.getId()) && passwordTextField.getText().equals(user.getPassword())) {
+                    JOptionPane.showMessageDialog(null, "로그인 성공!");
+                    break;
+                }
             }
-//            if (idTextField.getText().equals(user.getId()) && passwordTextField.getText().equals(user.getPassword())) {
-//                JOptionPane.showMessageDialog(null, "로그인 성공!");
-//            }
-//            if (!idTextField.getText().equals(user.getId()) || !passwordTextField.getText().equals(user.getPassword())) {
-//                JOptionPane.showMessageDialog(null, "로그인 실패!");
-//            }
             idTextField.setText("");
             passwordTextField.setText("");
         });
@@ -47,12 +50,6 @@ public class RegisterLoginPanel extends JPanel {
         });
     }
 
-    public void showContentPanel(JPanel panel) {
-        this.removeAll();
-        this.add(panel);
 
-        this.setVisible(false);
-        this.setVisible(true);
-    }
 
 }

@@ -51,6 +51,4 @@ class BookTest {
         Book book = new Book("세이노의 가르침", "세이노", "데이원", 736, "피보다 진하게 살아라", true, "오늘은 세이노의 가르침이라는 책을 읽었다.");
         assertEquals("오늘은 세이노의 가르침이라는 책을 읽었다.", book.getMemo());
     }
-
-
 }

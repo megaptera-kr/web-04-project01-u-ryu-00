@@ -17,4 +17,3 @@ public class Review implements Serializable {
         return content;
     }
 }
-

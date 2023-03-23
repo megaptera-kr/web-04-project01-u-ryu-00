@@ -1,4 +1,10 @@
-import javax.swing.*;
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import javax.swing.BoxLayout;
+import javax.swing.JTextField;
+import javax.swing.JCheckBox;
+import javax.swing.ImageIcon;
 import java.util.List;
 import java.awt.Image;
 

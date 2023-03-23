@@ -1,4 +1,7 @@
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.BoxLayout;
 import java.util.List;
 
 public class FavoritesPanel extends JPanel {

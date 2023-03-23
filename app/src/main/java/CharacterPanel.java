@@ -1,4 +1,8 @@
-import javax.swing.*;
+import javax.swing.JPanel;
+import javax.swing.BoxLayout;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import javax.swing.ImageIcon;
 import java.util.List;
 
 public class CharacterPanel extends JPanel {

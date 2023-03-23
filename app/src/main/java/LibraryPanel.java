@@ -1,4 +1,8 @@
-import javax.swing.*;
+import javax.swing.JPanel;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import java.util.List;
 
 public class LibraryPanel extends JPanel {

@@ -1,4 +1,7 @@
-import javax.swing.*;
+import javax.swing.JPanel;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JLabel;
 import java.util.List;
 
 public class BookReportPanel extends JPanel {

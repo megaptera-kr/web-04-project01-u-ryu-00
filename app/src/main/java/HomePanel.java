@@ -1,3 +1,6 @@
+import models.Book;
+import models.RecommendedBook;
+
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JButton;
@@ -5,17 +8,14 @@ import javax.swing.BoxLayout;
 import javax.swing.JTextField;
 import javax.swing.JCheckBox;
 import javax.swing.ImageIcon;
+import java.awt.*;
 import java.util.List;
-import java.awt.Image;
 
 public class HomePanel extends JPanel {
     HomePanel(List<Book> books) {
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-//        this.setLayout(null);
-
         JLabel howManyBooksLabel = new JLabel("총 " + books.size() + "권의 책을 읽으셨습니다.");
         this.add(howManyBooksLabel);
-//        howManyBooksLabel.setBounds(10,100,50,50);
 
         JButton recordButton = new JButton("읽은 책 기록하기");
         this.add(recordButton);
@@ -74,21 +74,24 @@ public class HomePanel extends JPanel {
             JPanel recommendedBooksPanel = new JPanel();
             recommendedBooksPanel.setLayout(new BoxLayout(recommendedBooksPanel, BoxLayout.Y_AXIS));
             JLabel recommendedBooksLabel = new JLabel("도톨이들을 위한 추천 도서 목록");
-            JLabel firstBooksLabel = new JLabel("1. 책은 도끼다");
+            RecommendedBook recommendedBook = new RecommendedBook("책은 도끼다");
+            JLabel firstBooksLabel = new JLabel("1. " + recommendedBook.getTitle());
             ImageIcon icon = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/Image/책은도끼다.jpg");
             Image image = icon.getImage().getScaledInstance(100, 150, Image.SCALE_SMOOTH);
             ImageIcon scaledIcon = new ImageIcon(image);
             JLabel firstImageLabel = new JLabel();
             firstImageLabel.setIcon(scaledIcon);
 
-            JLabel secondBooksLabel = new JLabel("2. 마흔의 서재");
+            RecommendedBook recommendedBook2 = new RecommendedBook("마흔의 서재");
+            JLabel secondBooksLabel = new JLabel("2. " + recommendedBook2.getTitle());
             ImageIcon icon2 = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/Image/마흔의서재.jpg");
             Image image2 = icon2.getImage().getScaledInstance(100, 150, Image.SCALE_SMOOTH);
             ImageIcon scaledIcon2 = new ImageIcon(image2);
             JLabel secondImageLabel = new JLabel();
             secondImageLabel.setIcon(scaledIcon2);
 
-            JLabel thirdBooksLabel = new JLabel("3. 나는 문학으로 생각한다");
+            RecommendedBook recommendedBook3 = new RecommendedBook("나는 문학으로 생각한다");
+            JLabel thirdBooksLabel = new JLabel("3. " + recommendedBook3.getTitle());
             ImageIcon icon3 = new ImageIcon("/Users/ryuyoojung/web-04-project01-u-ryu-00/app/src/main/Image/나는문학으로생각한다.jpeg");
             Image image3 = icon3.getImage().getScaledInstance(100, 150, Image.SCALE_SMOOTH);
             ImageIcon scaledIcon3 = new ImageIcon(image3);

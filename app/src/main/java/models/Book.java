@@ -1,3 +1,5 @@
+package models;
+
 import java.io.Serializable;
 
 public class Book implements Serializable {
@@ -45,5 +47,9 @@ public class Book implements Serializable {
 
     public String getMemo() {
         return memo;
+    }
+
+    public void editContent(String editedTitle) {
+        this.title = editedTitle;
     }
 }

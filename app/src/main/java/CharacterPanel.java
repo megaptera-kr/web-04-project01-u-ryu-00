@@ -1,3 +1,6 @@
+import models.Book;
+import models.Character;
+
 import javax.swing.JPanel;
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
@@ -13,42 +16,50 @@ public class CharacterPanel extends JPanel {
         this.add(howManyBooksLabel);
 
         if (books.size() < 3) {
-            JLabel characterLabel = new JLabel("현재 나의 캐릭터는 도톨이");
+            Character character = new Character("도톨이");
+            JLabel characterLabel = new JLabel("현재 나의 캐릭터는 " + character.getName());
             this.add(characterLabel);
         }
 
         if (books.size() >= 3 && books.size() < 6) {
-            JLabel characterLabel = new JLabel("현재 나의 캐릭터는 병뚜껑");
+            Character character = new Character("병뚜껑");
+            JLabel characterLabel = new JLabel("현재 나의 캐릭터는 " + character.getName());
             this.add(characterLabel);
         }
 
         if (books.size() >= 6 && books.size() < 10) {
-            JLabel characterLabel = new JLabel("현재 나의 캐릭터는 왕귤");
+            Character character = new Character("왕귤");
+            JLabel characterLabel = new JLabel("현재 나의 캐릭터는 " + character.getName());
             this.add(characterLabel);
         }
 
         if (books.size() >= 10 && books.size() < 15) {
-            JLabel characterLabel = new JLabel("현재 나의 캐릭터는 머그컵");
+            Character character = new Character("머그컵");
+            JLabel characterLabel = new JLabel("현재 나의 캐릭터는 " + character.getName());
             this.add(characterLabel);
         }
 
         if (books.size() >= 15 && books.size() < 20) {
-            JLabel characterLabel = new JLabel("현재 나의 캐릭터는 복숭아");
+            Character character = new Character("복숭아");
+            JLabel characterLabel = new JLabel("현재 나의 캐릭터는 " + character.getName());
             this.add(characterLabel);
         }
 
         if (books.size() >= 20 && books.size() < 25) {
-            JLabel characterLabel = new JLabel("현재 나의 캐릭터는 찐고구마");
+            Character character = new Character("찐고구마");
+            JLabel characterLabel = new JLabel("현재 나의 캐릭터는 " + character.getName());
             this.add(characterLabel);
         }
 
         if (books.size() >= 25 && books.size() < 30) {
-            JLabel characterLabel = new JLabel("현재 나의 캐릭터는 식빵이");
+            Character character = new Character("식빵이");
+            JLabel characterLabel = new JLabel("현재 나의 캐릭터는 " + character.getName());
             this.add(characterLabel);
         }
 
         if (books.size() >= 30) {
-            JLabel characterLabel = new JLabel("현재 나의 캐릭터는 아이패드");
+            Character character = new Character("아이패드");
+            JLabel characterLabel = new JLabel("현재 나의 캐릭터는 " + character.getName());
             this.add(characterLabel);
         }
 

@@ -33,7 +33,7 @@
 
 - [20230323(목) 작업 일지](https://github.com/megaptera-kr/web-04-project01-u-ryu-00/issues/18)
 
-- [20230323(목) 회고]()
+- [20230323(목) 회고](https://velog.io/@u-ryu-00/20230323-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B5%AC%ED%98%84-%EB%A7%88%EC%A7%80%EB%A7%89%EB%82%A0)
 
 ## ▶️ 프로젝트 실행 명령어
 ### Compile

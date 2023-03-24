@@ -35,6 +35,10 @@
 
 - [20230323(목) 회고](https://velog.io/@u-ryu-00/20230323-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B5%AC%ED%98%84-%EB%A7%88%EC%A7%80%EB%A7%89%EB%82%A0)
 
+- [20230323(금) 회고](https://velog.io/@u-ryu-00/20230324-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%A0%90%EA%B2%80)
+
+- [프로젝트 주간 회고](https://velog.io/@u-ryu-00/20230324-2023%EB%85%84-3%EC%9B%94-%EB%84%B7%EC%A7%B8%EC%A3%BC-%EC%A3%BC%EA%B0%84%ED%9A%8C%EA%B3%A0)
+
 ## ▶️ 프로젝트 실행 명령어
 ### Compile
 

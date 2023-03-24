@@ -64,7 +64,14 @@ public class LibraryPanel extends JPanel {
                     JTextField memoTextField2 = new JTextField(30);
                     JButton saveButton = new JButton("저장");
                     saveButton.addActionListener((saveEvent) -> {
-                        editContent(book,titleTextField2.getText(),authorTextField2.getText(),publisherTextField2.getText(),pageTextField2.getText(),authorTextField2.getText(),memoTextField2.getText());
+                        editContent(book, titleTextField2.getText(), authorTextField2.getText(), publisherTextField2.getText(), Integer.parseInt(pageTextField2.getText()), aboutTheBookTextField2.getText(), favoritesCheckBox2.isSelected(), memoTextField2.getText());
+                        this.removeAll();
+
+                        LibraryPanel libraryPanel = new LibraryPanel(books);
+                        this.add(libraryPanel);
+
+                        this.setVisible(false);
+                        this.setVisible(true);
                     });
 
                     recordPanel.add(titleLabel2);
@@ -93,20 +100,13 @@ public class LibraryPanel extends JPanel {
 
                     showContentPanel(recordPanel);
                 });
-
                 showContentPanel(bookInformationPanel);
             });
         }
     }
 
-    public void editContent(Book book, String editedTitle, String editedAuthor, String editedPublisher, String editedPage, String editedAboutTheBook, String editedMemo) {
-        book.editContent(editedTitle);
-        book.editContent(editedAuthor);
-        book.editContent(editedPublisher);
-        book.editContent(editedPage);
-        book.editContent(editedAboutTheBook);
-        book.editContent(editedMemo);
-        book.editContent(editedTitle);
+    public void editContent(Book book, String editedTitle, String editedAuthor, String editedPublisher, int editedPage, String editedAboutTheBook, boolean editedFavorites, String editedMemo) {
+        book.editContent(editedTitle, editedAuthor, editedPublisher, editedPage, editedAboutTheBook, editedFavorites, editedMemo);
     }
 
     public void showContentPanel(JPanel panel) {

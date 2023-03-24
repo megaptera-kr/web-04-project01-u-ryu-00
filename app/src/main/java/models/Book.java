@@ -49,7 +49,13 @@ public class Book implements Serializable {
         return memo;
     }
 
-    public void editContent(String editedTitle) {
+    public void editContent(String editedTitle, String editedAuthor, String editedPublisher, int editedPage, String editedAboutTheBook,boolean editedFavorites, String editedMemo) {
         this.title = editedTitle;
+        this.author = editedAuthor;
+        this.publisher = editedPublisher;
+        this.page = editedPage;
+        this.aboutTheBook = editedAboutTheBook;
+        this.favorites = editedFavorites;
+        this.memo = editedMemo;
     }
 }

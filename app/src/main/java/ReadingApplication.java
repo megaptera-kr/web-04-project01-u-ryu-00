@@ -34,7 +34,6 @@ public class ReadingApplication {
     private List<Review> backingReviews = new ArrayList<>();
     private List<Review> workReviews = new ArrayList<>();
 
-
     public static void main(String[] args) {
         ReadingApplication application = new ReadingApplication();
         application.run();

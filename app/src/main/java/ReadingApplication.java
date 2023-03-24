@@ -1,3 +1,9 @@
+import models.Book;
+import models.Menu;
+import models.Review;
+import models.Token;
+import models.User;
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
@@ -86,7 +92,8 @@ public class ReadingApplication {
     }
 
     public JButton createCrowdedButton() {
-        JButton button = new JButton("북적북적");
+        models.Menu menu = new models.Menu("북적북적");
+        JButton button = new JButton(menu.getMenu());
         button.addActionListener(event -> {
             JPanel crowdedPanel = new CrowdedPanel(firstStoreReviews, secondStoreReviews, proofReviews, nightReviews, moneyReviews, lossReviews, seinoReviews, fatherReviews, backingReviews, workReviews);
             showContentPanel(crowdedPanel);
@@ -95,7 +102,8 @@ public class ReadingApplication {
     }
 
     public JButton createRegisterLoginButton() {
-        JButton button = new JButton("로그인 / 회원가입");
+        models.Menu menu = new models.Menu("로그인 / 회원가입");
+        JButton button = new JButton(menu.getMenu());
         button.addActionListener(event -> {
             JPanel registerLoginPanel = new RegisterLoginPanel(users, tokens);
             showContentPanel(registerLoginPanel);
@@ -104,13 +112,13 @@ public class ReadingApplication {
     }
 
     public JButton createHomeButton() {
-        JButton button = new JButton("홈");
+        models.Menu menu = new models.Menu("홈");
+        JButton button = new JButton(menu.getMenu());
         button.addActionListener(event -> {
             if (tokens.size() == 0) {
                 JOptionPane.showMessageDialog(null, "접근 권한이 없습니다.");
             }
             if (tokens.size() != 0) {
-                JOptionPane.showMessageDialog(null, "저희 서비스를 이용해주셔서 감사합니다.");
                 JPanel homePanel = new HomePanel(books);
                 showContentPanel(homePanel);
             }
@@ -119,7 +127,8 @@ public class ReadingApplication {
     }
 
     public JButton createLibraryButton() {
-        JButton button = new JButton("서재");
+        models.Menu menu = new models.Menu("서재");
+        JButton button = new JButton(menu.getMenu());
         button.addActionListener(event -> {
             if (tokens.size() == 0) {
                 JOptionPane.showMessageDialog(null, "접근 권한이 없습니다.");
@@ -133,7 +142,8 @@ public class ReadingApplication {
     }
 
     public JButton createCharacterButton() {
-        JButton button = new JButton("캐릭터");
+        models.Menu menu = new models.Menu("캐릭터");
+        JButton button = new JButton(menu.getMenu());
         button.addActionListener(event -> {
             if (tokens.size() == 0) {
                 JOptionPane.showMessageDialog(null, "접근 권한이 없습니다.");
@@ -147,7 +157,8 @@ public class ReadingApplication {
     }
 
     public JButton createBookReportButton() {
-        JButton button = new JButton("기록");
+        models.Menu menu = new models.Menu("기록");
+        JButton button = new JButton(menu.getMenu());
         button.addActionListener(event -> {
             if (tokens.size() == 0) {
                 JOptionPane.showMessageDialog(null, "접근 권한이 없습니다.");
@@ -161,7 +172,8 @@ public class ReadingApplication {
     }
 
     public JButton createFavoritesButton() {
-        JButton button = new JButton("즐겨찾기");
+        models.Menu menu = new Menu("즐겨찾기");
+        JButton button = new JButton(menu.getMenu());
         button.addActionListener(event -> {
             if (tokens.size() == 0) {
                 JOptionPane.showMessageDialog(null, "접근 권한이 없습니다.");

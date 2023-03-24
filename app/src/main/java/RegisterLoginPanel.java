@@ -1,3 +1,6 @@
+import models.Token;
+import models.User;
+
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JTextField;

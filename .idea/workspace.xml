@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fff1355-c8b4-4051-87ac-f9ec6a26ca95" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/CrowdedPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/CrowdedPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/HomePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/HomePanel.java" afterDir="false" />

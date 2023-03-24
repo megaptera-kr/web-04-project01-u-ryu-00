@@ -1,8 +1,6 @@
-import javax.swing.JPanel;
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
+import models.Book;
+
+import javax.swing.*;
 import java.util.List;
 
 public class LibraryPanel extends JPanel {
@@ -48,12 +46,67 @@ public class LibraryPanel extends JPanel {
                 JButton editButton = new JButton("수정");
                 bookInformationPanel.add(editButton);
                 editButton.addActionListener((deleteEvent) -> {
-                    JOptionPane.showMessageDialog(null, "삭제 버튼을 눌러 기록을 삭제한 후 홈 화면으로 이동해서 수정한 책 정보를 다시 등록해주세요.");
+                    JPanel recordPanel = new JPanel();
+                    recordPanel.setLayout(new BoxLayout(recordPanel, BoxLayout.Y_AXIS));
+                    JLabel titleLabel2 = new JLabel("책 제목 : ");
+                    JTextField titleTextField2 = new JTextField(30);
+                    JLabel authorLabel2 = new JLabel("지은이 : ");
+                    JTextField authorTextField2 = new JTextField(10);
+                    JLabel publisherLabel2 = new JLabel("출판사 : ");
+                    JTextField publisherTextField2 = new JTextField(10);
+                    JLabel pageLabel2 = new JLabel("페이지 : ");
+                    JTextField pageTextField2 = new JTextField(5);
+                    JLabel aboutTheBookLabel2 = new JLabel("책 소개 : ");
+                    JTextField aboutTheBookTextField2 = new JTextField(30);
+                    JLabel favoritesLabel2 = new JLabel("즐겨찾기 : ");
+                    JCheckBox favoritesCheckBox2 = new JCheckBox();
+                    JLabel memoLabel2 = new JLabel("메모 : ");
+                    JTextField memoTextField2 = new JTextField(30);
+                    JButton saveButton = new JButton("저장");
+                    saveButton.addActionListener((saveEvent) -> {
+                        editContent(book,titleTextField2.getText(),authorTextField2.getText(),publisherTextField2.getText(),pageTextField2.getText(),authorTextField2.getText(),memoTextField2.getText());
+                    });
+
+                    recordPanel.add(titleLabel2);
+                    recordPanel.add(titleTextField2);
+                    recordPanel.add(authorLabel2);
+                    recordPanel.add(authorTextField2);
+                    recordPanel.add(publisherLabel2);
+                    recordPanel.add(publisherTextField2);
+                    recordPanel.add(pageLabel2);
+                    recordPanel.add(pageTextField2);
+                    recordPanel.add(aboutTheBookLabel2);
+                    recordPanel.add(aboutTheBookTextField2);
+                    recordPanel.add(favoritesLabel2);
+                    recordPanel.add(favoritesCheckBox2);
+                    recordPanel.add(memoLabel2);
+                    recordPanel.add(memoTextField2);
+                    recordPanel.add(saveButton);
+
+                    titleTextField2.setText(book.getTitle());
+                    authorTextField2.setText(book.getAuthor());
+                    publisherTextField2.setText(book.getPublisher());
+                    pageTextField2.setText(Integer.toString(book.getPage()));
+                    aboutTheBookTextField2.setText(book.getAboutTheBook());
+                    favoritesCheckBox2.setSelected(book.getFavorites());
+                    memoTextField2.setText(book.getMemo());
+
+                    showContentPanel(recordPanel);
                 });
 
                 showContentPanel(bookInformationPanel);
             });
         }
+    }
+
+    public void editContent(Book book, String editedTitle, String editedAuthor, String editedPublisher, String editedPage, String editedAboutTheBook, String editedMemo) {
+        book.editContent(editedTitle);
+        book.editContent(editedAuthor);
+        book.editContent(editedPublisher);
+        book.editContent(editedPage);
+        book.editContent(editedAboutTheBook);
+        book.editContent(editedMemo);
+        book.editContent(editedTitle);
     }
 
     public void showContentPanel(JPanel panel) {

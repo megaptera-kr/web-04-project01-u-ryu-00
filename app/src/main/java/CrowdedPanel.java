@@ -1,4 +1,5 @@
-import org.checkerframework.checker.units.qual.C;
+import models.BestSeller;
+import models.Review;
 
 import javax.swing.JPanel;
 import javax.swing.BoxLayout;
@@ -18,8 +19,8 @@ public class CrowdedPanel extends JPanel {
     public CrowdedPanel(List<Review> firstStoreReviews, List<Review> secondStoreReviews, List<Review> proofReviews, List<Review> nightReviews, List<Review> moneyReviews, List<Review> lossReviews, List<Review> seinoReviews, List<Review> fatherReviews, List<Review> backingReviews, List<Review> workReviews) {
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         JPanel topPanel = new JPanel();
-        topPanel.setLayout(new BoxLayout(topPanel, BoxLayout.Y_AXIS));
         topPanel.setBackground(Color.white);
+        topPanel.setPreferredSize(new Dimension(800, 50));
         this.add(topPanel);
         JLabel searchLabel = new JLabel("검색 : ");
         topPanel.add(searchLabel);
@@ -70,7 +71,8 @@ public class CrowdedPanel extends JPanel {
         Image image = icon.getImage();
         Image scaledImage = image.getScaledInstance(100, 150, Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(scaledImage);
-        JButton button = new JButton("불편한 편의점 1", scaledIcon);
+        BestSeller bestSeller = new BestSeller("불편한 편의점 1");
+        JButton button = new JButton(bestSeller.getTitle(), scaledIcon);
         button.setVerticalTextPosition(SwingConstants.BOTTOM);
         button.setHorizontalTextPosition(SwingConstants.CENTER);
         contentPanel.add(button);
@@ -82,7 +84,8 @@ public class CrowdedPanel extends JPanel {
         Image image2 = icon2.getImage();
         Image scaledImage2 = image2.getScaledInstance(100, 150, Image.SCALE_SMOOTH);
         ImageIcon scaledIcon2 = new ImageIcon(scaledImage2);
-        JButton button2 = new JButton("불편한 편의점 2", scaledIcon2);
+        BestSeller bestSeller2 = new BestSeller("불편한 편의점 2");
+        JButton button2 = new JButton(bestSeller2.getTitle(), scaledIcon2);
         button2.setVerticalTextPosition(SwingConstants.BOTTOM);
         button2.setHorizontalTextPosition(SwingConstants.CENTER);
         contentPanel.add(button2);
@@ -95,7 +98,9 @@ public class CrowdedPanel extends JPanel {
         Image image3 = icon3.getImage();
         Image scaledImage3 = image3.getScaledInstance(100, 150, Image.SCALE_SMOOTH);
         ImageIcon scaledIcon3 = new ImageIcon(scaledImage3);
-        JButton button3 = new JButton("구의 증명", scaledIcon3);
+        BestSeller bestSeller3 = new BestSeller("구의 증명");
+
+        JButton button3 = new JButton(bestSeller3.getTitle(), scaledIcon3);
         button3.setVerticalTextPosition(SwingConstants.BOTTOM);
         button3.setHorizontalTextPosition(SwingConstants.CENTER);
         contentPanel.add(button3);
@@ -107,7 +112,8 @@ public class CrowdedPanel extends JPanel {
         Image image4 = icon4.getImage();
         Image scaledImage4 = image4.getScaledInstance(100, 150, Image.SCALE_SMOOTH);
         ImageIcon scaledIcon4 = new ImageIcon(scaledImage4);
-        JButton button4 = new JButton("긴긴밤", scaledIcon4);
+        BestSeller bestSeller4 = new BestSeller("긴긴밤");
+        JButton button4 = new JButton(bestSeller4.getTitle(), scaledIcon4);
         button4.setVerticalTextPosition(SwingConstants.BOTTOM);
         button4.setHorizontalTextPosition(SwingConstants.CENTER);
         contentPanel.add(button4);
@@ -120,7 +126,8 @@ public class CrowdedPanel extends JPanel {
         Image image5 = icon5.getImage();
         Image scaledImage5 = image5.getScaledInstance(100, 150, Image.SCALE_SMOOTH);
         ImageIcon scaledIcon5 = new ImageIcon(scaledImage5);
-        JButton button5 = new JButton("돈의 속성", scaledIcon5);
+        BestSeller bestSeller5 = new BestSeller("돈의 속성");
+        JButton button5 = new JButton(bestSeller5.getTitle(), scaledIcon5);
         button5.setVerticalTextPosition(SwingConstants.BOTTOM);
         button5.setHorizontalTextPosition(SwingConstants.CENTER);
         contentPanel.add(button5);
@@ -132,7 +139,8 @@ public class CrowdedPanel extends JPanel {
         Image image6 = icon6.getImage();
         Image scaledImage6 = image6.getScaledInstance(100, 150, Image.SCALE_SMOOTH);
         ImageIcon scaledIcon6 = new ImageIcon(scaledImage6);
-        JButton button6 = new JButton("상실의 기쁨", scaledIcon6);
+        BestSeller bestSeller6 = new BestSeller("상실의 기쁨");
+        JButton button6 = new JButton(bestSeller6.getTitle(), scaledIcon6);
         button6.setVerticalTextPosition(SwingConstants.BOTTOM);
         button6.setHorizontalTextPosition(SwingConstants.CENTER);
         contentPanel.add(button6);
@@ -144,7 +152,8 @@ public class CrowdedPanel extends JPanel {
         Image image7 = icon7.getImage();
         Image scaledImage7 = image7.getScaledInstance(100, 150, Image.SCALE_SMOOTH);
         ImageIcon scaledIcon7 = new ImageIcon(scaledImage7);
-        JButton button7 = new JButton("세이노의 가르침", scaledIcon7);
+        BestSeller bestSeller7 = new BestSeller("세이노의 가르침");
+        JButton button7 = new JButton(bestSeller7.getTitle(), scaledIcon7);
         button7.setVerticalTextPosition(SwingConstants.BOTTOM);
         button7.setHorizontalTextPosition(SwingConstants.CENTER);
         contentPanel.add(button7);
@@ -156,7 +165,8 @@ public class CrowdedPanel extends JPanel {
         Image image8 = icon8.getImage();
         Image scaledImage8 = image8.getScaledInstance(100, 150, Image.SCALE_SMOOTH);
         ImageIcon scaledIcon8 = new ImageIcon(scaledImage8);
-        JButton button8 = new JButton("아버지의 해방일지", scaledIcon8);
+        BestSeller bestSeller8 = new BestSeller("아버지의 해방일지");
+        JButton button8 = new JButton(bestSeller8.getTitle(), scaledIcon8);
         button8.setVerticalTextPosition(SwingConstants.BOTTOM);
         button8.setHorizontalTextPosition(SwingConstants.CENTER);
         contentPanel.add(button8);
@@ -168,7 +178,8 @@ public class CrowdedPanel extends JPanel {
         Image image9 = icon9.getImage();
         Image scaledImage9 = image9.getScaledInstance(100, 150, Image.SCALE_SMOOTH);
         ImageIcon scaledIcon9 = new ImageIcon(scaledImage9);
-        JButton button9 = new JButton("역행자", scaledIcon9);
+        BestSeller bestSeller9 = new BestSeller("역행자");
+        JButton button9 = new JButton(bestSeller9.getTitle(), scaledIcon9);
         button9.setVerticalTextPosition(SwingConstants.BOTTOM);
         button9.setHorizontalTextPosition(SwingConstants.CENTER);
         contentPanel.add(button9);
@@ -180,7 +191,8 @@ public class CrowdedPanel extends JPanel {
         Image image10 = icon10.getImage();
         Image scaledImage10 = image10.getScaledInstance(100, 150, Image.SCALE_SMOOTH);
         ImageIcon scaledIcon10 = new ImageIcon(scaledImage10);
-        JButton button10 = new JButton("일머리 문해력", scaledIcon10);
+        BestSeller bestSeller10 = new BestSeller("일머리 문해력");
+        JButton button10 = new JButton(bestSeller10.getTitle(), scaledIcon10);
         button10.setVerticalTextPosition(SwingConstants.BOTTOM);
         button10.setHorizontalTextPosition(SwingConstants.CENTER);
         contentPanel.add(button10);

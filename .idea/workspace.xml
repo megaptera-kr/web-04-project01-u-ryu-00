@@ -8,10 +8,24 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/CrowdedPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/CrowdedPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/HomePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/HomePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/LibraryPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/LibraryPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/ReadingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ReadingApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/RegisterLoginPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/RegisterLoginPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/models/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/BookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/TokenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/TokenTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backingReview.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/books.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fatherReview.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstStoreReview.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lossReview.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moneyReview.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nightReview.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proofReview.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/secondStoreReview.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seinoReview.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workReview.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

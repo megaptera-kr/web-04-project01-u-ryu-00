@@ -1,13 +1,7 @@
 import models.Book;
 import models.RecommendedBook;
 
-import javax.swing.JPanel;
-import javax.swing.JLabel;
-import javax.swing.JButton;
-import javax.swing.BoxLayout;
-import javax.swing.JTextField;
-import javax.swing.JCheckBox;
-import javax.swing.ImageIcon;
+import javax.swing.*;
 import java.awt.*;
 import java.util.List;
 
@@ -29,7 +23,7 @@ public class HomePanel extends JPanel {
             JLabel publisherLabel = new JLabel("출판사 : ");
             JTextField publisherTextField = new JTextField(10);
             JLabel pageLabel = new JLabel("페이지 : ");
-            JTextField pageTextField = new JTextField(5);
+            JTextField pageTextField = new JTextField(30);
             JLabel aboutTheBookLabel = new JLabel("책 소개 : ");
             JTextField aboutTheBookTextField = new JTextField(30);
             JLabel favoritesLabel = new JLabel("즐겨찾기 : ");

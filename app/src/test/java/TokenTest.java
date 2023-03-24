@@ -11,6 +11,6 @@ class TokenTest {
     void Equals() {
         Token token1 = new Token("1234");
         Token token2 = new Token("1234");
-        assertEquals(token1.toString(), token2.toString());
+        assertEquals(token1, token2);
     }
 }

@@ -34,6 +34,9 @@ public class RegisterLoginPanel extends JPanel {
                     JOptionPane.showMessageDialog(null, "로그인 성공!");
                     Token token = new Token(idTextField.getText());
                     tokens.add(token);
+                    this.removeAll();
+                    this.setVisible(false);
+                    this.setVisible(true);
                 }
             }
             idTextField.setText("");
